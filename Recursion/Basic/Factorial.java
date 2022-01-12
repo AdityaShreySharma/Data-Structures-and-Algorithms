@@ -4,9 +4,10 @@ public class Factorial
   public static void main(String args[])
   {
     Scanner obj = new Scanner(System.in);
+    System.out.print("Number = ");
     int n = obj.nextInt();
     Factorial ob = new Factorial();
-    System.out.println(ob.fac(n));
+    System.out.println("Factorial = " + ob.fac(n));
   }
 
   public int fac(int n)

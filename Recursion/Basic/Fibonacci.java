@@ -4,9 +4,10 @@ public class Fibonacci
   public static void main(String[] args) 
   {
     Scanner obj = new Scanner(System.in);
+    System.out.print("Number = ");
     int n = obj.nextInt();
     Fibonacci ob = new Fibonacci();
-    System.out.println(ob.fib(n));
+    System.out.println("Fibonacci Number = " + ob.fib(n));
   }
   public int fib(int n)
   {
