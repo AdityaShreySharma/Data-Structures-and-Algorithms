@@ -26,6 +26,6 @@ public class capitalizeWord
     {
       ch = Character.toUpperCase(ch);
     }
-    return capital(str.substring(0,str.length()-1)) + Character.toString(ch);
+    return capital(str.substring(0, str.length()-1)) + Character.toString(ch);
   }
 }
