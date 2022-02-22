@@ -6,6 +6,7 @@ public class DecimalToBinary
     Scanner obj = new Scanner(System.in);
     System.out.print("Number = ");
     int n = obj.nextInt();
+    
     DecimalToBinary ob = new DecimalToBinary();
     System.out.println("Binary Equivalent = " + ob.decimalToBinary(n));
   }

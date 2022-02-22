@@ -8,6 +8,7 @@ public class Power
     int base = obj.nextInt();
     System.out.print("Exponent = ");
     int exp = obj.nextInt();
+    
     Power ob = new Power();
     System.out.println("Power = " + ob.power(base, exp));  
   }

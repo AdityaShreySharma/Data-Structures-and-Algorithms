@@ -6,6 +6,7 @@ public class SumOfDigits
     Scanner obj = new Scanner(System.in);
     System.out.print("Number = ");
     int n = obj.nextInt();
+    
     SumOfDigits ob = new SumOfDigits();
     System.out.println("Sum of the Digits = " + ob.sumOfDigits(n));
   }

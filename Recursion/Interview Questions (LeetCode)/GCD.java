@@ -8,6 +8,7 @@ public class GCD
     int m = obj.nextInt();
     System.out.print("2nd Number = ");
     int n = obj.nextInt();
+    
     GCD ob = new GCD();
     System.out.println("GCD = " + ob.gcd(m, n));
   }
