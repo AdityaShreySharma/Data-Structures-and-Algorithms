@@ -6,6 +6,7 @@ public class Fibonacci
     Scanner obj = new Scanner(System.in);
     System.out.print("Number = ");
     int n = obj.nextInt();
+    
     Fibonacci ob = new Fibonacci();
     System.out.println("Fibonacci Number = " + ob.fib(n));
   }

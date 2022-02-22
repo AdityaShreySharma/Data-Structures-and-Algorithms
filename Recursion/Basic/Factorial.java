@@ -6,6 +6,7 @@ public class Factorial
     Scanner obj = new Scanner(System.in);
     System.out.print("Number = ");
     int n = obj.nextInt();
+    
     Factorial ob = new Factorial();
     System.out.println("Factorial = " + ob.fac(n));
   }
