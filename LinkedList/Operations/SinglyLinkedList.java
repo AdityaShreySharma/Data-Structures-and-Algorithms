@@ -13,13 +13,11 @@ public class Create
   }
 }
 
-
 class Node 
 {
   int value;
   Node next;
 }
-
 
 class SinglyLinkedList 
 {
