@@ -1,15 +1,15 @@
-public class Create 
+public class Main
 {
   public static void main(String[] args) 
   {
     SinglyLinkedList s = new SinglyLinkedList();
-    s.createSinglyLinkedList(5);
-    s.insertInLinkedList(6, 1);
-    s.insertInLinkedList(7, 3);
-    s.insertInLinkedList(8, 4);
-    s.insertInLinkedList(9, 5);
+    s.createSinglyLinkedList(1);
+    s.insertInLinkedList(2, 1);
+    s.insertInLinkedList(3, 3);
+    s.insertInLinkedList(4, 4);
+    s.insertInLinkedList(5, 5);
     s.traverseLinkedList();
-    s.searchNode(8);
+    s.searchNode(4);
   }
 }
 
