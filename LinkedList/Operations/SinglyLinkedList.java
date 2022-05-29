@@ -25,7 +25,7 @@ class SinglyLinkedList
   Node tail;
   int size;
 
-  // Create LinkedList
+  // Create Linked List
   public Node createSinglyLinkedList(int nodeValue) 
   {
     head = new Node();
@@ -183,6 +183,6 @@ class SinglyLinkedList
   {
     head = null;
     tail = null;
-    System.out.println("LinkedList Deleted Successfully!");
+    System.out.println("Linked List Deleted Successfully!");
   }
 }

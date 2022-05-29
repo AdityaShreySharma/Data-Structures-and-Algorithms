@@ -7,10 +7,12 @@ public class Main
     c.insertNode(2, 0);
     c.insertNode(3, 1);
     c.insertNode(4, 8);
-    // System.out.println(c.head.value);
-    // System.out.println(c.head.next.value);
+    System.out.println(c.head.value);
+    System.out.println(c.head.next.value);
     c.traverseCircularSinglyLinkedList();
     c.searchNode(3);
+    c.deleteNode(0);
+    c.traverseCircularSinglyLinkedList();
   }
 }
 
@@ -26,7 +28,7 @@ class CircularSinglyLinkedList
   Node tail;
   int size;
 
-  // Create Circular Singly LinkedList
+  // Create Circular Singly Linked List
   public Node createCircularSinglyLinkedList(int nodeValue)
   {
     head = new Node();
@@ -129,5 +131,73 @@ class CircularSinglyLinkedList
 
 
   // Delete Node
-  
+  public void deleteNode(int location)
+  {
+    if(head == null)
+    {
+      System.out.println("Circular Singly Linked List does not exist!");
+      return;
+    }
+
+    else if(location == 0)
+    {
+      head = head.next;
+      tail.next = head;
+      size--;
+      if(size == 0)
+      {
+        tail = null;
+        head.next = null;
+        head = null;
+      }
+    }
+
+    else if(location >= size)
+    {
+      Node tempNode = head;
+      for(int i=0; i<size-1; i++)
+      {
+        tempNode = tempNode.next;
+      }
+      if(tempNode == head)
+      {
+        head.next = null;
+        tail = head = null;
+        size--;
+        return;
+      }
+      tempNode.next = null;
+      tail = tempNode;
+      size--;
+    }
+
+    else
+    {
+      Node tempNode = head;
+      for(int i=0; i<location-1; i++)
+      {
+        tempNode = tempNode.next;
+      }
+      tempNode.next = tempNode.next.next;
+      size--;
+    }
+  }
+
+  // Delete the Entire Circular Singly Linked List
+  public void deleteEntireCircularSinglyLinkedList()
+  {
+    if(head == null)
+    {
+      System.out.println("Circular Singly Linked List does not exist!");
+      return;
+    }
+
+    else
+    {
+      head = null;
+      tail.next = null;
+      tail = null;
+      System.out.println("Circular Singly Linked List Deleted Successfully!")
+    }
+  }
 }
