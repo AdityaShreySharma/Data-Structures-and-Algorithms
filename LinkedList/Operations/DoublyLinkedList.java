@@ -4,12 +4,14 @@ public class Main
   {
     DoublyLinkedList d = new DoublyLinkedList();
     d.createDoublyLinkedList(1);
-    // System.out.println(d.head.value);
     d.insertNode(2, 0);
     d.insertNode(3, 1);
     d.insertNode(4, 7);
     System.out.println(d.head.value);
     System.out.println(d.head.next.value);
+    d.traverseDoublyLinkedList();
+    d.reverseTraversal();
+    d.searchNode(4);
   }
 }
 
@@ -88,5 +90,86 @@ class DoublyLinkedList
 
 
   // Traversal
-  
+  public void traverseDoublyLinkedList()
+  {
+    if(head != null)
+    {
+      Node tempNode = head;
+      for(int i=0; i<size; i++)
+      {
+        System.out.print(tempNode.value);
+        if(i != size - 1)
+        {
+          System.out.print(" -> ");
+        }
+        tempNode = tempNode.next;
+      }
+      System.out.println("\n");
+    }
+    else
+    {
+      System.out.println("Doubly Linked List does not exist!");
+    }
+  }
+
+
+  // Reverse Traversal
+  public void reverseTraversal()
+  {
+    if(head != null)
+    {
+      Node tempNode = tail;
+      for(int i=0; i<size; i++)
+      {
+        System.out.print(tempNode.value);  
+        if(i != size - 1)
+        {
+          System.out.print(" <- ");
+        }  
+        tempNode = tempNode.previous;  
+      }
+      System.out.println("\n");
+    }
+    else
+    {
+      System.out.println("Doubly Linked List does not exist!");
+    }
+  }
+
+
+  // Searching
+  public boolean searchNode(int nodeValue)
+  {
+    if(head != null)
+    {
+      Node tempNode = head;
+      for(int i=0; i<size; i++)
+      {
+        if(tempNode.value == nodeValue)
+        {
+          System.out.println("Node found at Location - " + i);
+          return true;
+        }
+        tempNode = tempNode.next;
+      }
+    }
+    System.out.println("Node not found!");
+    return false;
+  }
+
+
+  // Deletion
+  public void deleteNode(int location)
+  {
+    if(head == null)
+    {
+      System.out.println("Doubly Linked List does not exist!");
+      return;
+    }
+
+    else if(location == 0)
+    {
+      
+    }
+  }
 }
