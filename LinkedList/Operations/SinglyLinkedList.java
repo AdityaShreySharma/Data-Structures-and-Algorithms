@@ -4,10 +4,10 @@ public class Main
   {
     SinglyLinkedList s = new SinglyLinkedList();
     s.createSinglyLinkedList(1);
-    s.insertInLinkedList(2, 1);
-    s.insertInLinkedList(3, 3);
-    s.insertInLinkedList(4, 4);
-    s.insertInLinkedList(5, 5);
+    s.insertNode(2, 1);
+    s.insertNode(3, 3);
+    s.insertNode(4, 4);
+    s.insertNode(5, 5);
     s.traverseLinkedList();
     s.searchNode(4);
   }
@@ -40,7 +40,7 @@ class SinglyLinkedList
 
 
   // Insertion
-  public void insertInLinkedList(int nodeValue, int location)
+  public void insertNode(int nodeValue, int location)
   {
     Node node = new Node();
     node.value = nodeValue;
