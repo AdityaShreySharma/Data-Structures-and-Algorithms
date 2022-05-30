@@ -12,6 +12,8 @@ public class Main
     d.traverseDoublyLinkedList();
     d.reverseTraversal();
     d.searchNode(4);
+    d.deleteNode(9);
+    d.traverseDoublyLinkedList();
   }
 }
 
@@ -169,7 +171,73 @@ class DoublyLinkedList
 
     else if(location == 0)
     {
-      
+      if(size == 1)
+      {
+        head = null;
+        tail = null;
+        size--;
+        return;
+      }
+      else
+      {
+        head = head.next;
+        head.previous = null;
+        size--;
+      }
+    }
+
+    else if(location >= size)
+    {
+      Node tempNode = tail.previous;
+      if(size == 1)
+      {
+        head = null;
+        tail = null;
+        size--;
+        return;
+      }
+      else
+      {
+        tempNode.next = null;
+        tail = tempNode;
+        size--;
+      }
+    }
+
+    else
+    {
+      Node tempNode = head;
+      for(int i = 0; i<location-1; i++)
+      {
+        tempNode = tempNode.next;
+      }
+      tempNode.next = tempNode.next.next;
+      tempNode.next.previous = tempNode;
+      size--;
+    }
+  }
+
+
+  // Delete Entire Doubly Linked List 
+  public void deleteEntireDoublyLinkedList()
+  {
+    if(head == null)
+    {
+      System.out.println("Doubly Linked List does not exist!");
+      return;
+    }
+
+    else
+    {
+      Node tempNode = head;
+      for(int i=0; i<size; i++)
+      {
+        tempNode.previous = null;
+        tempNode = tempNode.next;
+      }
+      head = null;
+      tail = null;
+      System.out.println("Doubly Linked List Deleted Successfully!");
     }
   }
 }
