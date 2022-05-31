@@ -81,7 +81,7 @@ class SinglyLinkedList
   }
 
 
-  // LinkedList Traversal
+  // Traversal
   public void traverseLinkedList()
   {
     
