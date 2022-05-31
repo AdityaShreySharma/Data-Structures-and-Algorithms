@@ -14,8 +14,6 @@ public class Main
     c.searchNode(3);
     c.deleteNode(7);
     c.traverseCircularDoublyLinkedList();
-    c.deleteEntireCircularDoublyLinkedList();
-    c.traverseCircularDoublyLinkedList();
   }
 }
 
