@@ -71,7 +71,7 @@ class Stack
   {
     if(isFull())
     {
-      System.out.println("Cannot Push " + value + ". Stack is Full");
+      System.out.println("Cannot Push " + value + ". Stack is Full!");
     }
     else
     {
@@ -105,8 +105,7 @@ class Stack
     }
     else
     {
-      int topElement = arr[topOfStack];
-      return topElement;
+      return arr[topOfStack];
     }
   }
 
