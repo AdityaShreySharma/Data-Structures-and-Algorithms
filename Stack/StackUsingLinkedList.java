@@ -26,11 +26,13 @@ public class StackUsingLinkedList
   }
 }
 
+
 class Node 
 {
   int value;
   Node next;
 }
+
 
 class Stack 
 {
@@ -101,6 +103,8 @@ class Stack
     System.out.println("Stack Deleted Successfully!");
   }
 }
+
+
 class LinkedList
 {
   Node head;
