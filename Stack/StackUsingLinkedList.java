@@ -74,7 +74,7 @@ class Stack
     else
     {
       result = linkedList.head.value;
-      linkedList.deleteNode(0);
+      linkedList.deleteNode();
     }
     return result;
   }
@@ -144,55 +144,8 @@ class LinkedList
   }
 
 
-  // Traversal
-  public void traverseLinkedList()
-  {
-    
-    if(head == null)
-    {
-      System.out.println("Linked List does not exist!");
-    }
-    
-    else
-    {
-      Node tempNode = head;
-      for(int i=0; i<size; i++)
-      {
-        System.out.print(tempNode.value);
-        if(i != size - 1)
-        {
-          System.out.print(" -> ");
-        }
-        tempNode = tempNode.next;
-      }
-    }
-    System.out.println("\n");
-  }
-
-
-  // Searching 
-  public boolean searchNode(int nodeValue)
-  {
-    if(head != null)
-    {
-      Node tempNode = head;
-      for(int i=0; i<size; i++)
-      {
-        if(tempNode.value == nodeValue)
-        {
-          System.out.println("Node found at Location - " + i);
-          return true;
-        }
-        tempNode = tempNode.next;
-      }
-    }
-    System.out.println("Node not found!");
-    return false;
-  }
-
-
   // Delete Node
-  public void deleteNode(int location)
+  public void deleteNode()
   {
     if(head == null) 
     {
@@ -200,7 +153,7 @@ class LinkedList
       return;
     } 
     
-    else if(location == 0)
+    else
     {
       head = head.next;
       size--;
@@ -209,43 +162,5 @@ class LinkedList
         tail = null;
       }
     }
-
-    else if(location >= size)
-    {
-      Node tempNode = head;
-      for(int i=0; i<size-1; i++)
-      {
-        tempNode = tempNode.next;
-      }
-      if(tempNode == head)
-      {
-        tail = head = null;
-        size--;
-        return;
-      }
-      tempNode.next = null;
-      tail = tempNode;
-      size--;
-    }
-
-    else
-    {
-      Node tempNode = head;
-      for(int i=0; i<location-1; i++)
-      {
-        tempNode = tempNode.next;
-      }
-      tempNode.next = tempNode.next.next;
-      size--;
-    }
-  }
-
-
-  // Delete the Entire LinkedList
-  public void deleteEntireLinkedList()
-  {
-    head = null;
-    tail = null;
-    System.out.println("Linked List Deleted Successfully!");
   }
 }
