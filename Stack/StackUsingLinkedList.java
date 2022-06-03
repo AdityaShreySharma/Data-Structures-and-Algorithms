@@ -52,7 +52,7 @@ class Stack
   
   public void push(int value)
   {
-    linkedList.insertNode(value, 0);
+    linkedList.insertNode(value);
     System.out.println(value + " Inserted Successfully!");
   }
 
@@ -124,7 +124,7 @@ class LinkedList
 
 
   // Insertion
-  public void insertNode(int nodeValue, int location)
+  public void insertNode(int nodeValue)
   {
     Node node = new Node();
     node.value = nodeValue;
@@ -135,7 +135,7 @@ class LinkedList
       return;
     }
 
-    else if(location == 0)
+    else
     {
       node.next = head;
       head = node;
