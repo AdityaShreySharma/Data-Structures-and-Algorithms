@@ -4,8 +4,8 @@ public class QueueUsingArray
   {
     Queue q = new Queue(5);
 
-    System.out.println(q.isFull());
     System.out.println(q.isEmpty());
+    System.out.println(q.isFull());
     System.out.println(" ");
 
     q.enQueue(9);
@@ -35,8 +35,8 @@ class Queue
   public Queue(int size)
   {
     this.arr = new int[size];
-    topOfQueue = -1;
-    beginningOfQueue = -1;
+    this.topOfQueue = -1;
+    this.beginningOfQueue = -1;
     System.out.println("Queue Created!");
   }
 
@@ -89,7 +89,7 @@ class Queue
   {
     if(isEmpty())
     { 
-      System.out.println("Stack is Empty");
+      System.out.println("Queue is Empty!");
       return -1;
     }
     else
@@ -109,7 +109,7 @@ class Queue
   {
     if(isEmpty())
     { 
-      System.out.println("Stack is Empty");
+      System.out.println("Queue is Empty!");
       return -1;
     }
     else
