@@ -80,12 +80,12 @@ class Stack
     if(isEmpty())
     {
       System.out.println("Stack is Empty!");
+      return -1;
     }
     else
     {
-      result = linkedList.head.value;
+      return linkedList.head.value;
     }
-    return result;
   }
 
 
