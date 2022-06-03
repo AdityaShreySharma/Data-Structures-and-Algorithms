@@ -34,6 +34,7 @@ class Stack
   public Stack()
   {
     linkedList = new LinkedList();
+    System.out.println("Stack Created!");
   }
 
   
