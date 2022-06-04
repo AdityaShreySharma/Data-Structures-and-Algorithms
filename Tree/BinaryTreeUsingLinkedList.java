@@ -29,7 +29,12 @@ class Node
   int value;
   Node left;
   Node right;
-  int height;
+
+  public Node()
+  {
+    this.left = null;
+    this.right = null;
+  }
 }
 
 class BinaryTree
