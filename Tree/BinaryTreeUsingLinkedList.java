@@ -66,9 +66,9 @@ class BinaryTree
     {
       return;
     }
-    preOrder(node.left);
+    inOrder(node.left);
     System.out.print(node.value + " ");
-    preOrder(node.right);
+    inOrder(node.right);
     System.out.println(" ");
   }
 
@@ -79,8 +79,8 @@ class BinaryTree
     {
       return;
     }
-    preOrder(node.left);
-    preOrder(node.right);
+    postOrder(node.left);
+    postOrder(node.right);
     System.out.print(node.value + " ");
     System.out.println(" ");
   }
