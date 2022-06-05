@@ -32,7 +32,7 @@ public class BinaryTreeUsingArray
 
     System.out.println(tree.searchNode(7));
 
-    tree.deleteNode(6);
+    tree.deleteNode(16);
     tree.levelOrder();
     System.out.println(" ");
 
@@ -130,25 +130,16 @@ class BinaryTree
     {
       if(arr[i] == value)
       {
-        System.out.print(value + " found in the Tree at location - ");
         return i;
       }
     }
-    System.out.println(value  + " not found in the Tree!");
     return -1;
   }
 
 
   public void deleteNode(int value)
   {
-    int location = 0;
-    for(int i = 1; i <= lastUsedIndex; i++)
-    {
-      if(arr[i] == value)
-      {
-        location = i;
-      }
-    }
+    int location = searchNode(value);
     if(location == -1)
     {
       return;
