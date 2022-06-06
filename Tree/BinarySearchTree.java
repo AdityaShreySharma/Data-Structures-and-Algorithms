@@ -43,7 +43,6 @@ public class BinarySearchTree
 class Node 
 {
   int value;
-  int height;
   Node left;
   Node right;
 }
