@@ -150,7 +150,7 @@ class AVL
     return newRoot;
   }
 
-  public int getBalancedNode(Node node) 
+  public int getBalance(Node node) 
   {
     if(node == null)
     {
@@ -178,7 +178,7 @@ class AVL
     }
 
     node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
-    int balance = getBalancedNode(node);
+    int balance = getBalance(node);
 
     if(balance > 1 && value < node.left.value)
     { 
@@ -193,7 +193,7 @@ class AVL
     {
       return rotateLeft(node);
     }
-    if (balance < - 1 && value < node.right.value) 
+    if (balance < -1 && value < node.right.value) 
     {
       node.right = rotateRight(node.right);
       return rotateLeft(node);
@@ -256,21 +256,21 @@ class AVL
         node = null;
       }
     }
-    int balance = getBalancedNode(node);
-    if(balance > 1 && getBalancedNode(node.left) >= 0) 
+    int balance = getBalance(node);
+    if(balance > 1 && getBalance(node.left) >= 0) 
     {
       return rotateRight(node);
     }
-    if(balance > 1 && getBalancedNode(node.left) < 0) 
+    if(balance > 1 && getBalance(node.left) < 0) 
     {
      node.left = rotateLeft(node.left);
       return rotateRight(node);
     }
-    if(balance < -1 && getBalancedNode(node.right) <= 0) 
+    if(balance < -1 && getBalance(node.right) <= 0) 
     {
       return rotateLeft(node);
     }
-    if(balance < -1 && getBalancedNode(node.right) > 0) 
+    if(balance < -1 && getBalance(node.right) > 0) 
     {
       node.right = rotateRight(node.right);
       return rotateLeft(node);
@@ -286,5 +286,6 @@ class AVL
   public void deleteAVL()
   {
     root = null;
+    System.out.println("AVL Tree Deleted!");
   }
 }
