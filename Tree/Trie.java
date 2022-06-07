@@ -91,12 +91,14 @@ class Trie
     TrieNode currentNode = parentNode.children.get(ch);
     boolean canThisNodeBeDeleted;
 
+    // Some other prefix of a string is same as the one to be deleted
     if(currentNode.children.size() > 1)
     {
       delete(currentNode, str, index + 1);
       return false;
     }
     
+    // The string is a prefix of another string
     if(index == str.length() - 1)
     {
       if(currentNode.children.size() >= 1)
@@ -111,6 +113,7 @@ class Trie
       }
     }
 
+    // Another string is a prefix of this string 
     if(currentNode.endOfString == true)
     {
       delete(currentNode, str, index + 1);
@@ -118,6 +121,7 @@ class Trie
     }
     canThisNodeBeDeleted = delete(currentNode, str, index + 1);
     
+    // No node depends on this string
     if(canThisNodeBeDeleted == true)
     {
       parentNode.children.remove(ch);
