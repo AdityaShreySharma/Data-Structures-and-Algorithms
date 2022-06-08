@@ -5,13 +5,19 @@ public class Main
   {
     DirectChaining d = new DirectChaining(15);
 
-    d.insertInHashTable("The");
-    d.insertInHashTable("quick");
-    d.insertInHashTable("brown");
-    d.insertInHashTable("fox");
-    d.insertInHashTable("over");
-
+    d.insertKey("The");
+    d.insertKey("quick");
+    d.insertKey("brown");
+    d.insertKey("fox");
+    d.insertKey("over");
     d.displayHashTable();
+    System.out.println(" ");
+
+    d.searchKey("brown");
+    System.out.println(" ");
+
+    d.deleteKey("brown");
+    d.searchKey("brown");
   }
 }
 
@@ -39,7 +45,7 @@ class DirectChaining
   }
 
 
-  public void insertInHashTable(String str)
+  public void insertKey(String str)
   {
     int newIndex = hashFunction(str, hashTable.length);
     if(hashTable[newIndex] == null)
@@ -66,6 +72,33 @@ class DirectChaining
       {
         System.out.println("Index - " + i + ", Key - " + hashTable[i]);
       }
+    }
+  }
+
+
+  public boolean searchKey(String str) 
+  {
+    int newIndex = hashFunction(str, hashTable.length);
+    if(hashTable[newIndex] != null && hashTable[newIndex].contains(str))
+    {
+      System.out.println("\"" + str + "\" found in the Hash Table at location - " + newIndex);
+      return true;
+    }
+    else
+    {
+      System.out.println("\"" + str + "\" not found in the Hash Table!");
+      return false;
+    }
+  }
+
+
+  public void deleteKey(String str) 
+  {
+    int newIndex = hashFunction(str, hashTable.length);
+    boolean result = searchKey(str);
+    if(result == true)
+    {
+      hashTable[newIndex].remove(str);
     }
   }
 }
