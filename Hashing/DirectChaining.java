@@ -25,7 +25,6 @@ public class Main
 class DirectChaining
 {
   LinkedList<String>[] hashTable;
-  int maxChainSize = 5;
 
   public DirectChaining(int size)
   {
