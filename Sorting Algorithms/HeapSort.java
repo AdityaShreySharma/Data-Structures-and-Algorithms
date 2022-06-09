@@ -8,8 +8,6 @@ public class Main
 
     hs.heapSort();
     hs.displayArray(arr);
-
-
   }
 }
 
