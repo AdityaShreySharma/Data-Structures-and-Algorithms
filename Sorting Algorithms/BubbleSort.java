@@ -28,8 +28,7 @@ public class BubbleSort
 
   public void displayArray(int arr[])
   {
-    int n = arr.length;
-    for(int i=0; i<n; i++)
+    for(int i=0; i<arr.length; i++)
     {
       System.out.print(arr[i] + " ");
     }
