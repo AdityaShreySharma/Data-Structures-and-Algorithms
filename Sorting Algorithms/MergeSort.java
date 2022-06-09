@@ -25,8 +25,8 @@ public class MergeSort
     leftTempArray[middle - left + 1] = Integer.MAX_VALUE;
     rightTempArray[right - middle] = Integer.MAX_VALUE;
 
-    int i=0;
-    int j=0;
+    int i = 0;
+    int j = 0;
     for(int k=left; k<=right; k++)
     {
       if(leftTempArray[i] < rightTempArray[j])
