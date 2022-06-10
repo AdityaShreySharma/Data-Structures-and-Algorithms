@@ -65,7 +65,7 @@ class Graph
       {
         if(j == vertices.get(i).neighbors.size() - 1 ) 
         {
-          sb.append((vertices.get(i).neighbors.get(j).name) );
+          sb.append((vertices.get(i).neighbors.get(j).name));
         } 
         else 
         {
