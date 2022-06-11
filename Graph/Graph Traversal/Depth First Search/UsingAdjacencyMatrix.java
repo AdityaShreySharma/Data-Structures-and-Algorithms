@@ -76,11 +76,11 @@ class Graph
 
   public void visitNodes(Node node)
   {
-    LinkedList<Node> queue = new LinkedList<Node>();
-    queue.add(node);
-    while(!queue.isEmpty())
+    Stack<Node> stack = new Stack<Node>();
+    stack.push(node);
+    while(!stack.isEmpty())
     {
-      Node currentNode = queue.remove(0);
+      Node currentNode = stack.pop();
       currentNode.isVisited = true;
       System.out.print(currentNode.name + " ");
       ArrayList<Node> neighbors = getNeighbors(currentNode);
@@ -88,14 +88,14 @@ class Graph
       {
         if(!neighbor.isVisited)
         {
-          queue.add(neighbor);
+          stack.push(neighbor);
           neighbor.isVisited = true;
         }
       }
     }
   }
 
-  public void BFS()
+  public void DFS()
   {
     for(Node node: vertices)
     {
