@@ -33,45 +33,31 @@ class Node
 {
   String name;
   int index;
-  boolean isVisited;
+  boolean isVisited = false; 
+  ArrayList<Node> neighbors = new ArrayList<Node>();
 
   public Node(String name, int index)
   {
     this.name = name;
     this.index = index;
-    this.isVisited = false;
   }
 }
 
 class Graph
 {
   ArrayList<Node> vertices = new ArrayList<Node>();
-  int adjacencyMatrix[][];
 
   public Graph(ArrayList<Node> vertices)
   {
     this.vertices = vertices;
-    this.adjacencyMatrix = new int[vertices.size()][vertices.size()];
   }
 
   public void addUndirectedEdge(int i, int j)
   {
-    adjacencyMatrix[i][j] = 1;
-    adjacencyMatrix[j][i] = 1;
-  }
-
-  public ArrayList<Node> getNeighbors(Node node)
-  {
-    ArrayList<Node> neighbors = new ArrayList<Node>();
-    int nodeIndex = node.index;
-    for(int i=0; i<adjacencyMatrix.length; i++)
-    {
-      if(adjacencyMatrix[nodeIndex][i] == 1)
-      {
-        neighbors.add(vertices.get(i));
-      }
-    }
-    return neighbors;
+    Node first = vertices.get(i);
+    Node second = vertices.get(j);
+    first.neighbors.add(second);
+    second.neighbors.add(first);
   }
 
   public void visitNodes(Node node)
@@ -83,8 +69,7 @@ class Graph
       Node currentNode = queue.remove(0);
       currentNode.isVisited = true;
       System.out.print(currentNode.name + " ");
-      ArrayList<Node> neighbors = getNeighbors(currentNode);
-      for(Node neighbor: neighbors)
+      for(Node neighbor: currentNode.neighbors)
       {
         if(!neighbor.isVisited)
         {
@@ -109,18 +94,19 @@ class Graph
   public String toString() 
   {
     StringBuilder sb = new StringBuilder();
-    sb.append("   ");
-    for(int i = 0; i < vertices.size(); i++)
-    {
-      sb.append(vertices.get(i).name + " ");
-    }
-    sb.append("\n");
-    for(int i=0; i< vertices.size(); i++)
+    for(int i=0; i<vertices.size(); i++) 
     {
       sb.append(vertices.get(i).name + "  ");
-      for(int j: adjacencyMatrix[i])
+      for(int j=0; j<vertices.get(i).neighbors.size(); j++) 
       {
-        sb.append((j) + " ");
+        if(j == vertices.get(i).neighbors.size() - 1 ) 
+        {
+          sb.append((vertices.get(i).neighbors.get(j).name));
+        } 
+        else 
+        {
+          sb.append((vertices.get(i).neighbors.get(j).name) + " -> ");
+        }
       }
       sb.append("\n");
     }
