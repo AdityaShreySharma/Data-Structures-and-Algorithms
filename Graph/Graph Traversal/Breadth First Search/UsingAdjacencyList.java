@@ -33,13 +33,14 @@ class Node
 {
   String name;
   int index;
-  boolean isVisited = false; 
+  boolean isVisited; 
   ArrayList<Node> neighbors = new ArrayList<Node>();
 
   public Node(String name, int index)
   {
     this.name = name;
     this.index = index;
+    this.isVisited = false;
   }
 }
 
