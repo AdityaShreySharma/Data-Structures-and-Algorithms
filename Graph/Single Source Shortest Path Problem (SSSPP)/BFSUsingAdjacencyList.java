@@ -5,7 +5,7 @@ public class BFSForSSSPP
   {
     ArrayList<Node> vertices = new ArrayList<Node>();
     
-    // Refer Graph.PNG
+    // Refer Graph 1.PNG
     vertices.add(new Node("A", 0));
     vertices.add(new Node("B", 1));
     vertices.add(new Node("C", 2));
