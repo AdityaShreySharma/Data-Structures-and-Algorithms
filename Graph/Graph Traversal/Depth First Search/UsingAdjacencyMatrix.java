@@ -5,6 +5,7 @@ public class DepthFirstSearch
   {
     ArrayList<Node> vertices = new ArrayList<Node>();
 
+    // Refer Graph.PNG
     vertices.add(new Node("A", 0));
     vertices.add(new Node("B", 1));
     vertices.add(new Node("C", 2));
