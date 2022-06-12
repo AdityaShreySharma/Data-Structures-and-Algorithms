@@ -52,6 +52,7 @@ class Node implements Comparable<Node>
     return name;
   }
 
+  // Refer Dijkstra's Complexity.PNG
   @Override
   public int compareTo(Node other)
   {
@@ -85,6 +86,7 @@ class Graph
 
   public void Dijkstra(Node node)
   {
+    // Refer Dijkstra's Complexity.PNG
     PriorityQueue<Node> queue = new PriorityQueue<Node>();
     node.distance = 0;
     queue.addAll(vertices);
