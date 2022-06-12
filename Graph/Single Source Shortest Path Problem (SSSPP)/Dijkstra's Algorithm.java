@@ -36,7 +36,6 @@ class Node implements Comparable<Node>
   int index;
   ArrayList<Node> neighbors = new ArrayList<Node>();
   HashMap<Node, Integer> weights = new HashMap<>();
-  boolean isVisited = false;
   Node parent;
   int distance;
 
