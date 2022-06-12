@@ -27,7 +27,6 @@ public class BFSForSSSPP
     graph.addUndirectedEdge(5, 6);
 
     graph.BFSForSSSPP(vertices.get(0));
-    System.out.println(" ");
   }
 }
 
