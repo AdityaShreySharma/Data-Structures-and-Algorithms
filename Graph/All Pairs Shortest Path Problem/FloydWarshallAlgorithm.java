@@ -5,7 +5,7 @@ public class FloydWarshallAlgorithm
   {
     ArrayList<Node> vertices = new ArrayList<Node>();
 
-    // Refer Graph 2.PNG
+    // Refer Graph.PNG
     vertices.add(new Node("A", 0));
     vertices.add(new Node("B", 1));
     vertices.add(new Node("C", 2));
