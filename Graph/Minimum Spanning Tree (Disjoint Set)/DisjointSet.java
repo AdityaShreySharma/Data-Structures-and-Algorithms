@@ -29,17 +29,12 @@ class Node
 {
   String name;
   int index;
-  ArrayList<Node> neighbors = new ArrayList<Node>();
-  HashMap<Node, Integer> weights = new HashMap<>();
-  Node parent;
-  int distance;
   DisjointSet set;
 
   public Node(String name, int index)
   {
     this.name = name;
     this.index = index;
-    distance = Integer.MAX_VALUE;
   }
 
   @Override
