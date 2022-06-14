@@ -108,10 +108,10 @@ class Graph
         }
       }
     }
-    for(Node nodeToCkeck: vertices)
+    for(Node nodeToCheck: vertices)
     {
-      System.out.print("From A to " + nodeToCkeck + ", Distance = " + nodeToCkeck.distance + ", Path = ");
-      displayPath(nodeToCkeck);
+      System.out.print("From A to " + nodeToCheck + ", Distance = " + nodeToCheck.distance + ", Path = ");
+      displayPath(nodeToCheck);
       System.out.println(" ");
     }
   }
