@@ -94,7 +94,7 @@ class Prim
     while(!queue.isEmpty())
     {
       Node currentNode = queue.remove();
-      for(Node neighbor : currentNode.neighbors)
+      for(Node neighbor: currentNode.neighbors)
       {
         if(queue.contains(neighbor))
         {
