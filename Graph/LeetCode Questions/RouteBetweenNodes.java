@@ -79,7 +79,7 @@ class Graph
   public boolean searchNode(Node start, Node end)
   {
     LinkedList<Node> queue = new LinkedList<Node>();
-    for(Node node : vertices)
+    for(Node node: vertices)
     {
       node.state = State.Unvisited;
     }
