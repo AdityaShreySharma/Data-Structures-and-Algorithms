@@ -87,11 +87,11 @@ class ActivitySelection
 
     for(int i=1; i<activityList.size(); i++)
     {
-      Activity activity = activityList.get(i);
+      Activity currentActivity = activityList.get(i);
       if(activity.getStartTime() >= previousActivity.getFinishTime())
       {
-        System.out.println(activity);
-        previousActivity = activity;
+        System.out.println(currentActivity);
+        previousActivity = currentActivity;
       }
     }
   }
