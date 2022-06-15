@@ -27,7 +27,7 @@ class CoinChange
       if(maxAmount > 0)
       {
         System.out.println("Coin Value = " + coinValue + ", Count = " + (n / coinValue));
-        n = n - maxAmount;
+        n -= maxAmount;
       }
       if(n == 0)
       {
