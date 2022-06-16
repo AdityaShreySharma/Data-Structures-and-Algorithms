@@ -3,7 +3,10 @@ public class Main
   public static void main(String[] args)
   {
     ConvertOneStringToAnother c = new ConvertOneStringToAnother();
-    System.out.println(c.findMinOperations("table", "tbres", 0, 0));
+    String s1 = "table";
+    String s2 = "tbres";
+    
+    System.out.println(c.findMinOperations(s1, s2, 0, 0));
   }
 }
 
