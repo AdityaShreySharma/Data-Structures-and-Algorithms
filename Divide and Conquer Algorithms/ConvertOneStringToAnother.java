@@ -3,7 +3,7 @@ public class Main
   public static void main(String[] args)
   {
     ConvertOneStringToAnother c = new ConvertOneStringToAnother();
-    System.out.println(c.findMinOperations("table", "tbres", 0, 0));
+    System.out.println(c.findMinOperations("Aditya", "Aditya", 0, 0));
   }
 }
 
@@ -24,8 +24,8 @@ class ConvertOneStringToAnother
       return findMinOperations(s1, s2, index1 + 1, index2 + 1);
     }
 
-    int delete = 1 + findMinOperations(s1, s2, index1 + 1, index2);
-    int insert = 1 + findMinOperations(s1, s2, index1, index2 + 1);
+    int delete = 1 + findMinOperations(s1, s2, index1, index2 + 1);
+    int insert = 1 + findMinOperations(s1, s2, index1 + 1, index2);
     int replace = 1 + findMinOperations(s1, s2, index1 + 1, index2 + 1);
 
     return Math.min(delete, Math.min(insert, replace));
