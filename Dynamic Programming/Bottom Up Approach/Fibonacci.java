@@ -1,5 +1,5 @@
 import java.util.*;
-public class FibonacciUsingBottomUpApproach
+public class Fibonacci
 {
   public static void main(String args[])
   {
