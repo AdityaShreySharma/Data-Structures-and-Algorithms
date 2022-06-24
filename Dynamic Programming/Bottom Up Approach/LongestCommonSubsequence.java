@@ -18,7 +18,7 @@ public class LongestCommonSubsequence
     {
       for(int j=s2.length(); j>=1; j--)
       {
-        if (s1.charAt(i-1) == s2.charAt(j-1)) 
+        if(s1.charAt(i-1) == s2.charAt(j-1)) 
         {
           dp[i-1][j-1] =  Math.max((1 + dp[i][j]), Math.max(dp[i][j-1], dp[i-1][j]));
         }
