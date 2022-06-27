@@ -36,20 +36,26 @@ public class UnionIntersection
 
   public void intersection(int a[], int b[])
   {
-    int intersectionCount = 0;
-    System.out.print("Intersestion = ");
-    for(int i=0; i<a.length; i++)
+    HashSet<Integer> intersection1 = new HashSet<Integer>();
+    for(int i: a)
     {
-      for(int j=0; j<b.length; j++)
+      intersection1.add(i);
+    }
+ 
+    HashSet<Integer> intersection2 = new HashSet<Integer>();
+    for(int i: b)
+    {
+      if(intersection1.contains(i))
       {
-        if(a[i] == b[j])
-        {
-          System.out.print(b[j] + " ");
-          intersectionCount++;
-        }
+        intersection2.add(i);
       }
     }
+    System.out.print("Intersection = ");
+    for(int i: intersection2)
+    {
+      System.out.print(i + " ");
+    }
     System.out.println(" ");
-    System.out.println("Intersection Count = " + intersectionCount);
+    System.out.println("Intersection Count = " + intersection2.size());
   }
 }
