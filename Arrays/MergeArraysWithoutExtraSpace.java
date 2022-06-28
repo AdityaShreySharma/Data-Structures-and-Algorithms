@@ -13,7 +13,7 @@ public class MergeArraysWithoutExtraSpace
     int n = a.length;
     int m = b.length;
     int i = 0, j = 0, k = n - 1;
-    while(i <= k && j < m)
+    while(i < n && j < m)
     {
       if(a[i] < b[j])
       {
