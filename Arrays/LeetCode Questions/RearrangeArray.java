@@ -1,11 +1,9 @@
-import java.util.*;
 public class RearrangeArray
 {
   public static void main(String[] args)
   {
     int arr[] = {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8};
     rearrangeArray(arr);
-    System.out.println(Arrays.toString(arr));
   }
 
   public static int partitionArray(int arr[])
@@ -34,5 +32,11 @@ public class RearrangeArray
       arr[i] = arr[partition];
       arr[partition] = temp;
     }
+
+    for(int i = 0; i < arr.length; i++)
+    {
+      System.out.print(arr[i] + " ");
+    }
+    System.out.println(" ");
   }
-}
+} 
