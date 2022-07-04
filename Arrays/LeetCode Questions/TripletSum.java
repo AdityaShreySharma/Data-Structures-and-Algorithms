@@ -3,8 +3,8 @@ public class TripletSum
 {
   public static void main(String[] args)
   { 
-    int arr[] = {1, 2, 3, 4, 5};
-    int sum = 9;
+    int arr[] = {1, 2, 4, 3, 6};
+    int sum = 10;
     tripletSum(arr, sum);
   }
 
@@ -13,7 +13,7 @@ public class TripletSum
     Arrays.sort(arr);
     int n = arr.length;
 
-    for(int i = 0; i < n - 3; i++)
+    for(int i = 0; i < n; i++)
     { 
       int k = sum - arr[i];
       int low = i + 1;
