@@ -10,7 +10,7 @@ public class SmallestSubarraySum
   public static int smallestSubarraySum(int arr[], int value)
   {
     int currentSum = 0;
-    int minLength = arr.length - 1;
+    int minLength = arr.length + 1;
     int start = 0;
     int end = 0;
     
