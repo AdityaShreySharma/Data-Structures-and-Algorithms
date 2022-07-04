@@ -11,9 +11,7 @@ public class TripletSum
   public static void tripletSum(int arr[], int sum)
   {
     Arrays.sort(arr);
-    int n = arr.length;
-
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < arr.length; i++)
     { 
       int k = sum - arr[i];
       int low = i + 1;
