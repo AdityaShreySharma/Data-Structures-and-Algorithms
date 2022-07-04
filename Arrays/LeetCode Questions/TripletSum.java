@@ -3,8 +3,8 @@ public class TripletSum
 {
   public static void main(String[] args)
   { 
-    int arr[] = {1, 4, 45, 6, 10, 8,};
-    int sum = 13;
+    int arr[] = {1, 2, 3, 4, 5};
+    int sum = 9;
     tripletSum(arr, sum);
   }
 
