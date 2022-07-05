@@ -42,21 +42,5 @@ public class MinSwap
       swaps = Math.min(swaps, j);
     }
     return swaps;
-    // int j = 0;
-    // for(int i = 0; i < arr.length; i++)
-    // { 
-    //   if(arr[i] > value)
-    //   {
-    //     j++;
-    //   }
-    //   else if(j > 0)
-    //   { 
-    //     int temp = arr[i];
-    //     arr[i] = arr[i - j];
-    //     arr[i - j] = temp;
-    //     swaps++;
-    //   }
-    // }
-    // return swaps;
   }
 }
