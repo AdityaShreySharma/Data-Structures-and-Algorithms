@@ -9,22 +9,54 @@ public class MinSwap
 
   public static int minSwap(int arr[], int value)
   { 
-    int swaps = 0;
-    int j = 0;
+    int count = 0;
+
     for(int i = 0; i < arr.length; i++)
-    { 
+    {
+      if(arr[i] <= value)
+      { 
+        count++;
+      }
+    }
+
+    int j = 0;
+    for(int i = 0; i < count; i++)
+    {
       if(arr[i] > value)
       {
         j++;
       }
-      else if(j > 0)
-      { 
-        int temp = arr[i];
-        arr[i] = arr[i - j];
-        arr[i - j] = temp;
-        swaps++;
+    }
+
+    int swaps = j;
+    for(int i = 0, k = count; k < arr.length; i++, k++)
+    { 
+      if(arr[i] > value)
+      {
+        j--;
       }
+      if(arr[k] > value)
+      { 
+        j++;
+      }
+      swaps = Math.min(swaps, j);
     }
     return swaps;
+    // int j = 0;
+    // for(int i = 0; i < arr.length; i++)
+    // { 
+    //   if(arr[i] > value)
+    //   {
+    //     j++;
+    //   }
+    //   else if(j > 0)
+    //   { 
+    //     int temp = arr[i];
+    //     arr[i] = arr[i - j];
+    //     arr[i - j] = temp;
+    //     swaps++;
+    //   }
+    // }
+    // return swaps;
   }
 }
