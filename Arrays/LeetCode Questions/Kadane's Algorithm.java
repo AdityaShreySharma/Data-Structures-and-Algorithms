@@ -16,7 +16,11 @@ public class Kadane
       if(currentSum > maxSum) 
       {
         maxSum = currentSum;
-      } 
+      }
+      if(currentSum < 0)
+      {
+        currentSum = 0;
+      }
     }
     return maxSum;
   }
