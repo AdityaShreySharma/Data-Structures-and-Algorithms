@@ -20,7 +20,7 @@ public class RowWithMostNumberOfOnes
       return 0;
     }
 
-    int row = -1;
+    int row = 0;
     int i = 0;
     int j = matrix[0].length - 1;
 
