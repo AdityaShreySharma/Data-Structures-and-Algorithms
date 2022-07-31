@@ -43,7 +43,7 @@ public class SortArrayOf012
       i++;
     }
 
-    while(i< (countZero + countOne))
+    while(i < (countZero + countOne))
     {
       arr[i] = 1;
       i++;
