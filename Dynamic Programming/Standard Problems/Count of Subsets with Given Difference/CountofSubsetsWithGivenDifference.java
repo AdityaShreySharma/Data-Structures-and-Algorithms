@@ -7,9 +7,9 @@ public class CountOfSubsetsWithGivenSum
     int arr[] = {1, 2, 3, 1, 2};
     int diff = 1;
 
-    for(int i = 0; i <1001; i++)
+    for(int i = 0; i < 1001; i++)
     {
-        for(int j = 0; j <10000; j++)
+        for(int j = 0; j < 10000; j++)
         {
             dp[i][j] = -1;
         }
